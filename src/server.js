@@ -44,6 +44,11 @@ connectDatabase(config.mongoUrl);
 app.use('/api/auth', authRoutes);
 app.use('/api/books', bookRoutes);
 
+// 👇 Add a simple route for root URL
+app.get('/', (req, res) => {
+    res.send('📚 Welcome to Zynetic Book API!');
+});
+
 // Health check route
 app.get('/health', (req, res) => {
     res.status(200).json({ message: '✅ Server is healthy' });
