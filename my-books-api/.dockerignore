@@ -1,0 +1,22 @@
+# Ignore node_modules to prevent unnecessary copying
+node_modules
+frontend/node_modules
+
+# Ignore environment variables
+.env
+
+# Ignore build and log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+frontend/dist
+
+# Ignore Docker-related files
+.dockerignore
+Dockerfile
+
+# Ignore system files
+.DS_Store
+Thumbs.db
