@@ -40,3 +40,39 @@
 .read-the-docs {
   color: #888;
 }
+.form-container {
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(36, 0, 70, 0.7);
+  border-radius: 12px;
+}
+
+.form-container h2 {
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--secondary-color);
+  background: #240046;
+  color: white;
+}
+
+.form-container button {
+  width: 100%;
+}
+.auth-nav a {
+  font-weight: 600;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.auth-nav a:hover {
+  color: var(--secondary-color);
+}

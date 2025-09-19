@@ -63,6 +63,18 @@ body {
   overflow-y: auto;
 }
 
+/* Custom Scrollbar */
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+.content::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+.content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 a {
   font-weight: 500;
   color: var(--accent-color);
@@ -99,6 +111,45 @@ button:focus-visible {
   outline: 2px solid var(--accent-color);
 }
 
+/* Card Styling */
+.card {
+  background: rgba(16, 0, 43, 0.7);
+  border: 1px solid rgba(157, 78, 221, 0.3);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Form Inputs */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  background: rgba(36, 0, 70, 0.6);
+  color: var(--text-color);
+  outline: none;
+}
+input:focus, textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #root {
+    max-width: 100%;
+    min-width: unset;
+    border-radius: 0;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -109,5 +160,10 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+    color: #000;
+  }
+  input, textarea {
+    background: #fff;
+    color: #000;
   }
 }
